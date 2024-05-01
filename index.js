@@ -50,6 +50,7 @@ const completeTask = () => {
       tasks[indiceTarea].completed = true
       console.log(chalk.bold.green('Tarea completada'))
       console.log(tasks)
+      console.log(tasks)
     } else {
       console.log(chalk.bold.red('Tarea no encontrada'))
     }
