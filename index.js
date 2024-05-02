@@ -33,8 +33,12 @@ const addTask = () => {
 }
 
 const listTask = () => {
+  //traer datos de tasks.json
+  const tasksJson = fs.readFileSync(rutaJson, 'utf-8')
+  const tasksParce = JSON.parse(tasksJson)
+
   console.log(chalk.bold.green('Lista de tareas'))
-  tasks.forEach((item, index) => {
+  tasksParce.forEach((item, index) => {
     const estado = item.completed ? '✔' : '❌'
     if (item.completed) {
       console.log(chalk.bold.green(`${index + 1}- ${estado}- ${item.tarea}`))
@@ -44,6 +48,7 @@ const listTask = () => {
       )
     }
   })
+  addTask()
   displayMenu()
   chooseOption()
 }

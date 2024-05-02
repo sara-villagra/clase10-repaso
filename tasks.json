@@ -1,6 +1,22 @@
 [
   {
-    "tarea": "hacer la tarea del cole",
+    "tarea": "preparar los sanguchitos",
+    "completed": true
+  },
+  {
+    "tarea": "comprar manzanas",
+    "completed": true
+  },
+  {
+    "tarea": "3",
+    "completed": false
+  },
+  {
+    "tarea": "cocer",
+    "completed": false
+  },
+  {
+    "tarea": "picar carne",
     "completed": false
   }
 ]
