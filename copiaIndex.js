@@ -1,11 +1,10 @@
 import chalk from 'chalk'
 import { createInterface } from 'readline'
-import fs from 'node:fs'
 
 //console.log(chalk.blue('Hello world!'))
 //console.log(chalk.bgRed.bold('Hello world!'))
 const tasks = []
-const rutaJson = './tasks.json'
+
 const rl = createInterface({
   input: process.stdin,
   output: process.stdout
@@ -22,10 +21,7 @@ const displayMenu = () => {
 const addTask = () => {
   rl.question('Ingrese la tarea: ', (task) => {
     tasks.push({ tarea: task, completed: false })
-
-    const tasksJson = JSON.stringify(tasks, null, 2)
-    fs.writeFileSync(rutaJson, tasksJson)
-
+    console.log(tasks)
     console.log('la tarea fue ingresada  ')
     displayMenu()
     chooseOption()
